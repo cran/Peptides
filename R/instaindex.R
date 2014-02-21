@@ -1,4 +1,4 @@
-II<-function(seq){
+instaindex<-function(seq){
   seq<-s2c(seq)
   AA<-matrix(nrow=1,ncol=20)
   colnames(AA)<-c("I","L","W","F","V","M","Y","A","P","T","S","C","G","N","D","Q","E","H","K","R")
@@ -20,5 +20,5 @@ II<-function(seq){
     }
   }
   Guruprasad[,3]<-Guruprasad[,1]*Guruprasad[,2]
-  (10/length(seq))*sum(Guruprasad[,3],na.rm=T)
+  round((10/length(seq))*sum(Guruprasad[,3],na.rm=T),2)
 }
