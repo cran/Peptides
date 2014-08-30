@@ -1,40 +1,56 @@
-\name{AAcomp}
-\alias{AAcomp}
-%- Also NEED an '\alias' for EACH other topic documented here.
-\title{To compute the Amino-acid composition of a protein sequence
-%%  ~~function to do ... ~~
+\name{aacomp}
+\alias{aacomp}
+
+\title{Compute the amino acid composition of a protein sequence
 }
+
 \description{
-Calculate the percentage of Amino acid in a sequence and categorized as: Tiny, Small, Aliphatic, Aromatic, Non Polar, Polar, Charged, Basic and Acid.  
+This function calculates the amount of amino acids of a particular class and classified as: Tiny, Small, Aliphatic, Aromatic, Non-polar, Polar, Charged, Basic and Acidic based on their size and R-groups using same function implemented in EMBOSS "pepstat". The output is a matrix with the number and percentage of amino acids of a particular class 
 }
+
 \usage{
-AAcomp(seq)
+aacomp(seq)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
-  \item{seq}{AA sequence string in upper case}
-%%     ~~Describe \code{x} here~~
+  \item{seq}{amino acid sequence string}
 }
+
 \value{
-The output is an array with the number and percentage of amino acids of a particular class
-\item{Tiny}{(A+C+G+S+T)}
-\item{Small}{(A+B+C+D+G+N+P+S+T+V)}
-\item{Aliphatic}{(A+I+L+V)}
-\item{Aromatic}{(F+H+W+Y)}
-\item{Non-polar}{(A+C+F+G+I+L+M+P+V+W+Y)}
-\item{Polar}{(D+E+H+K+N+Q+R+S+T+Z)}
-\item{Charged}{(B+D+E+H+K+R+Z)}
-\item{Basic}{(H+K+R)}
-\item{Acidic}{(B+D+E+Z)}
+The output is a matrix with the number and percentage of amino acids of a particular class
+\item{Tiny}{(A + C + G + S + T)}
+\item{Small}{(A + B + C + D + G + N + P + S + T + V)}
+\item{Aliphatic}{(A + I + L + V)}
+\item{Aromatic}{(F + H + W + Y)}
+\item{Non-polar}{(A + C + F + G + I + L + M + P + V + W + Y)}
+\item{Polar}{(D + E + H + K + N + Q + R + S + T + Z)}
+\item{Charged}{(B + D + E + H + K + R + Z)}
+\item{Basic}{(H + K + R)}
+\item{Acidic}{(B + D + E + Z)}
+}
+\note{
+%%  ~~further notes~~
+This function was originally written by Alan Bleasby (ajb@ebi.ac.uk) for EMBOSS package. Further information: http://emboss.sourceforge.net/apps/cvs/emboss/apps/pepstats.html
 }
 \references{
-Roger G. Harrison "Expression of soluble heterologous proteins via fusion with NusA protein" in inNovations 11, June 2000, p 4 - 7.
+Rice, Peter, Ian Longden, and Alan Bleasby. "EMBOSS: the European molecular biology open software suite." Trends in genetics 16.6 (2000): 276-277.
 }
-
 \examples{
-## AA composition of PDB: 1D9J Cecropin Peptide
+# COMPARED TO PEPSTATS
+# http://emboss.bioinformatics.nl/cgi-bin/emboss/pepstats
+# Property      Residues              Number  Mole\%
+# Tiny          (A+C+G+S+T)             4   19.048
+# Small         (A+B+C+D+G+N+P+S+T+V)   4   19.048
+# Aliphatic     (A+I+L+V)               5   23.810
+# Aromatic      (F+H+W+Y)               5   23.810
+# Non-polar     (A+C+F+G+I+L+M+P+V+W+Y) 11  52.381
+# Polar         (D+E+H+K+N+Q+R+S+T+Z)   9   42.857
+# Charged       (B+D+E+H+K+R+Z)         8   38.095
+# Basic         (H+K+R)                 8   38.095
+# Acidic        (B+D+E+Z)               0   00.000
 
-AAcomp("KWKLFKKIGIGKFLHSAKKFX")
+## AA composition of PDB: 1D9J Cecropin Peptide
+aacomp("KWKLFKKIGIGKFLHSAKKFX")
 
 ## Output
 #          Number Mole\%
@@ -46,5 +62,5 @@ AAcomp("KWKLFKKIGIGKFLHSAKKFX")
 # Polar          9 42.86
 # Charged        8 38.10
 # Basic          8 38.10
-# Acid           0  0.00
+# Acidic         0  0.00
 }

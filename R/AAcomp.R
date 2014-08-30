@@ -1,22 +1,28 @@
-AAcomp<-function(seq){
-  A<-table(s2c(seq))
-  AA<-matrix(0,ncol=length(LETTERS),nrow=1) ; colnames(AA)<-LETTERS
-  CM<-matrix(0,nrow=9,ncol=2) ; rownames(CM)<-c("Tiny","Small","Aliphatic","Aromatic","Non Polar","Polar","Charged","Basic","Acid") ; colnames(CM)<-c("Number","Mole%")
-  for (i in 1:length(A)){
-    for (j in 1:length(AA)){
-      if (names(A)[i]==colnames(AA)[j]){
-        AA[j]<-A[i]
-      }
-    } 
-  }
-  CM[1,1]<-sum(AA[c(1,3,7,19,20)]) ; CM[1,2]<-round(CM[1,1]/length(s2c(seq)),4)*100
-  CM[2,1]<-sum(AA[c(1,2,3,4,7,14,16,19,20,22)]); CM[2,2]<-round(CM[2,1]/length(s2c(seq)),4)*100
-  CM[3,1]<-sum(AA[c(1,9,12,22)]); CM[3,2]<-round(CM[3,1]/length(s2c(seq)),4)*100
-  CM[4,1]<-sum(AA[c(6,8,23,25)]); CM[4,2]<-round(CM[4,1]/length(s2c(seq)),4)*100
-  CM[5,1]<-sum(AA[c(1,3,6,7,9,12,13,16,22,23,25)]); CM[5,2]<-round(CM[5,1]/length(s2c(seq)),4)*100
-  CM[6,1]<-sum(AA[c(4,5,8,11,14,17,18,19,20,26)]); CM[6,2]<-round(CM[6,1]/length(s2c(seq)),4)*100
-  CM[7,1]<-sum(AA[c(2,4,5,8,11,18,26)]); CM[7,2]<-round(CM[7,1]/length(s2c(seq)),4)*100
-  CM[8,1]<-sum(AA[c(8,11,18)]); CM[8,2]<-round(CM[8,1]/length(s2c(seq)),4)*100
-  CM[9,1]<-sum(AA[c(2,4,5,26)]); CM[9,2]<-round(CM[9,1]/length(s2c(seq)),4)*100
-  return(CM)
+# AACOMP
+# Compute the amount of amino acids of a particular class and reported as:
+# Tiny, Small, Aliphatic, Aromatic, Non Polar, Polar, Charged, Basic and Acid
+# This function is the same implemented in EMBOSS "pepstat"
+# EMBOSS function: Copyright (C) Alan Bleasby (ajb@ebi.ac.uk)
+
+aacomp<-function(seq){
+  # Create data matrix output
+  AA<-matrix(ncol = 2,nrow = 9)
+  rownames(AA)<-c("Tiny","Small","Aliphatic","Aromatic","NonPolar","Polar","Charged","Basic","Acidic")
+  colnames(AA)<-c("Number","Mole%")
+  # Divide the amino acid sequence and makes a frequencies table
+  seq1<-table(s2c(toupper(seq)))
+  # Classify amino acids in a particular class and sum the absolute frequencies
+  AA[1,1]<-sum(seq1[c("A","C","G","S","T")],na.rm = TRUE)
+  AA[2,1]<-sum(seq1[c("A","B","C","D","G","N","P","S","T","V")],na.rm = TRUE)
+  AA[3,1]<-sum(seq1[c("A","I","L","V")],na.rm = TRUE)
+  AA[4,1]<-sum(seq1[c("F","H","W","Y")],na.rm = TRUE)
+  AA[5,1]<-sum(seq1[c("A","C","F","G","I","L","M","P","V","W","Y")],na.rm = TRUE)
+  AA[6,1]<-sum(seq1[c("D","E","H","K","N","Q","R","S","T","Z")],na.rm = TRUE)
+  AA[7,1]<-sum(seq1[c("B","D","E","H","K","R","Z")],na.rm = TRUE)
+  AA[8,1]<-sum(seq1[c("H","K","R")],na.rm = TRUE)
+  AA[9,1]<-sum(seq1[c("B","D","E","Z")],na.rm = TRUE)
+  # Compute the relative frequencies for each class in percentage
+  AA[,2]<-(AA[,1]/nchar(seq)*100)
+  # Return output matrix rounded to 2 decimals
+  return(round(AA,2))
 }

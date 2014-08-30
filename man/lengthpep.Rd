@@ -1,10 +1,10 @@
 \name{lengthpep}
 \alias{lengthpep}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{ To calculate the aminoacid length of a protein sequence
+\title{Compute the amino acid length of a protein sequence
 %%  ~~function to do ... ~~
 }
-\description{This function counts the number of amino acids making up the input protein sequence 
+\description{This function counts the number of amino acids in a protein sequence 
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
@@ -12,7 +12,7 @@ lengthpep(seq)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{seq}{AA sequence string in upper case
+  \item{seq}{amino acid sequence string
 }
 }
 
@@ -20,10 +20,11 @@ lengthpep(seq)
 Return the residue count as a numeric vector of length one}
 
 \examples{
-lengthpep("MSLSNKLTLDKLDVKGKRVVMRVDFNVPMKNNQITNNQRIKAAVPSIKFCLDNGAKSVVLMSHLGRPDGVPMPDKYSLEP
-VAVELKSLLGKDVLFLKDCVGPEVEKACANPAAGSVILLENLRFHVEEEGKGKDASGNKVKAEPAKIEAFRASLSKLGDV
-YVNDAFGTAHRAHSSMVGVNLPQKAGGFLMKKELNYFAKALESPERPFLAILGGAKVADKIQLINNMLDKVNEMIIGGGM
-AFTFLKVLNNMEIGTSLFDEEGAKIVKDLMSKAEKNGVKITLPVDFVTADKFDENAKTGQATVASGIPAGWMGLDCGPES
-SKKYAEAVTRAKQIVWNGPVGVFEWEAFARGTKALMDEVVKATSRGCITIIGGGDTATCCAKWNTEDKVSHVSTGGGASL
-ELLEGKVLPGVDALSNI")
+# COMPARED TO ExPASy ProtParam
+# http://web.expasy.org/protparam
+# SEQUENCE: QWGRRCCGWGPGRRYCVRWC
+# Number of amino acids: 20
+  
+lengthpep("QWGRRCCGWGPGRRYCVRWC")
+# [1] 20
 }

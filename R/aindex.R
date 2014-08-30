@@ -1,20 +1,18 @@
+# ALIPHATIC INDEX
+# This function compute the aliphatic index based on Ikai (1980). 
+# Thermostability and aliphatic index of globular proteins. 
+# Journal of Biochemistry, 88(6), 1895-1898.
+
 aindex<-function(seq){
-  Val<-Ala<-Leu<-Ile<-0
-  AA<-table(s2c(seq))
-  for(i in 1:length(AA)){
-    if(names(AA)[i]=="V"){
-      Val<-100*(as.numeric(AA)[i]/length(s2c(seq)))
-    } 
-    else if(names(AA)[i]=="A"){
-      Ala<-100*(as.numeric(AA)[i]/length(s2c(seq)))
-    }
-    else if(names(AA)[i]=="L"){
-      Leu<-100*(as.numeric(AA)[i]/length(s2c(seq)))
-    }
-    else if(names(AA)[i]=="I"){
-      Ile<-100*(as.numeric(AA)[i]/length(s2c(seq)))
-    }
-  }
-  ai<-round((Ala+(2.9*Val)+(3.9*(Leu+Ile))),2)
-  return(ai)
+  # Divide the amino acid sequence and extracts the relative frequency of Alanine, Valine, Leucine and Isoleucine
+  p<-(table(factor(s2c(toupper(seq)),levels = c("A","V","L","I")))/nchar(seq))
+  
+  # Aliphatic index = X(Ala) + a * X(Val) + b * ( X(Ile) + X(Leu) )  
+  # where X(Ala), X(Val), X(Ile), and X(Leu) are mole percent (100 X mole fraction) 
+  # of alanine, valine, isoleucine, and leucine. 
+  # The coefficients a and b are the relative volume of valine side chain (a = 2.9) 
+  # and of Leu/Ile side chains (b = 3.9) to the side chain of alanine. 
+  
+  # Return the result as percentage rounded to 2 decimals
+  round(sum(c(p["A"],(2.9*p["V"]),3.9*p[c("L","I")]),na.rm=T)*100,2)
 }
