@@ -1,5 +1,5 @@
 Package: Peptides
-Version: 1.0
+Version: 1.0.1
 Date: 2014-08-30
 Title: Calculate indices and theoretical physicochemical properties of
         peptides and protein sequences
@@ -10,7 +10,7 @@ Depends: seqinr , R (>= 2.10.0)
 Suggests: RUnit
 Description: Calculate physicochemical properties and indices from aminoacid sequences of peptides and proteins. Include also utilities for read and plot GROMACS output files .XVG.
 License: GPL-2
-Packaged: 2014-08-30 19:07:28 UTC; Daniel
+Packaged: 2014-10-15 23:28:53 UTC; Daniel
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2014-08-30 23:01:41
+Date/Publication: 2014-10-16 07:52:43
