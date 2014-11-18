@@ -5,7 +5,7 @@
 
 aindex<-function(seq){
   # Divide the amino acid sequence and extracts the relative frequency of Alanine, Valine, Leucine and Isoleucine
-  p<-(table(factor(s2c(toupper(seq)),levels = c("A","V","L","I")))/nchar(seq))
+  p<-table(strsplit(toupper(seq),"")[[1]])/nchar(seq)
   
   # Aliphatic index = X(Ala) + a * X(Val) + b * ( X(Ile) + X(Leu) )  
   # where X(Ala), X(Val), X(Ile), and X(Leu) are mole percent (100 X mole fraction) 
@@ -14,5 +14,5 @@ aindex<-function(seq){
   # and of Leu/Ile side chains (b = 3.9) to the side chain of alanine. 
   
   # Return the result as percentage rounded to 2 decimals
-  round(sum(c(p["A"],(2.9*p["V"]),3.9*p[c("L","I")]),na.rm=T)*100,2)
+  sum(c(p["A"],(2.9*p["V"]),3.9*p[c("L","I")]),na.rm=T)*100
 }
