@@ -1,6 +1,10 @@
 NEWS
 ====
 
+**Peptides v.1.0.3**
+* A membpos function bug has been fixed.
+* The results now are not rounded.
+
 **Peptides v.1.0.2**
 
 * Hydrophobicity function now can compute the GRAVY index with one of the 38 scales includes in Peptides (*new):

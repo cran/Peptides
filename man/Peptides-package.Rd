@@ -12,8 +12,8 @@ and proteins. Include also the option to read and plot XVG output files from GRO
 \tabular{ll}{
 Package: \tab Peptides\cr
 Type: \tab Package\cr
-Version: \tab 1.0.2\cr
-Date: \tab 2014-11-18\cr
+Version: \tab 1.0.3\cr
+Date: \tab 2014-12-12\cr
 License: \tab GPL-2\cr
 }
 }
