@@ -1,5 +1,8 @@
 NEWS
 ====
+**Peptides v.1.1.0**
+* The kidera function and Kfactors dataset was included.
+
 **Peptides v.1.0.4**
 * A instaindex function bug has been fixed.
 * A problem with line breaks in sequences was solved.
