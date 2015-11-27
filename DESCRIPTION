@@ -1,6 +1,6 @@
 Package: Peptides
-Version: 1.1.0
-Date: 2015-06-03
+Version: 1.1.1
+Date: 2015-11-26
 Title: Calculate Indices and Theoretical Properties of Protein
         Sequences
 Author: Daniel Osorio, Paola Rondon-Villarreal and Rodrigo Torres.
@@ -10,6 +10,6 @@ Suggests: RUnit
 Description: Calculate physicochemical properties and indices from amino-acid sequences of peptides and proteins. Include also the option to read and plot output files from the 'GROMACS' molecular dynamics package.
 License: GPL-2
 NeedsCompilation: no
-Packaged: 2015-06-03 01:35:16 UTC; Daniel
+Packaged: 2015-11-26 22:10:36 UTC; Daniel
 Repository: CRAN
-Date/Publication: 2015-06-03 08:14:36
+Date/Publication: 2015-11-27 08:53:11
