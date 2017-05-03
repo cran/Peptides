@@ -1,4 +1,5 @@
 #' @export pI
+#' @importFrom stats optimize
 #' @title Compute the isoelectic point (pI) of a protein sequence
 #' @description The isoelectric point (pI), is the pH at which a particular molecule or surface carries no net electrical charge. 
 #' @param seq An amino-acids sequence
@@ -37,16 +38,11 @@
 #' pI(seq= "QWGRRCCGWGPGRRYCVRWC",pKscale= "Rodwell")
 #' # [1] 9.718
 pI <- function (seq, pKscale = "EMBOSS") {
-  # Define pH values
-  pHs <- seq(0 , 14 , 0.0001)
-  # Evaluate the net charge for defined pHs
-  charges <- lapply(seq, function(seq) {
-    charge(seq, pHs, pKscale)
-  })
-  # Computes the pI and returns the value rounded to 3 decimals
-  pI <-
-    unlist(lapply(charges, function(charges) {
-      pHs[which.min(abs(charges))]
-    }))
-  return(pI)
+  seq <- toupper(seq)
+  pKscale <- names(AAdata$pK)[pmatch(pKscale,names(AAdata$pK))]
+  if(is.na(pKscale)){
+    stop("The selected pK scale is not available. pKscale must be one of: 'Bjellqvist','Dawson', 'EMBOSS', 'Lehninger', 'Murray', 'Rodwell', 'Sillero', 'Solomon', or 'Stryer'.")
+  }
+  sapply(seq,function(sequence){unlist(optimize(f = absoluteCharge,interval = c(0,14), seq = sequence, pKscale = pKscale))[[1]]},USE.NAMES = FALSE)
 }
+
