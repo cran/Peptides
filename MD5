@@ -1,7 +1,7 @@
-87b6ff709dc3841fd945920813f583d1 *DESCRIPTION
+d56178efad959d049d5409fdc858da0c *DESCRIPTION
 acaa720eec7e8a564552d5ee2f8d9843 *NAMESPACE
-05d1b52e47f4a2556528fe712c5b2913 *NEWS.md
-b9d5f7916289ffc4dc2b7962dd7f82a6 *R/RcppExports.R
+4ec74eda6a4ee0a6a7d5d5787e1493e1 *NEWS.md
+09ef24c94e024910b1b77cd59bdfe517 *R/RcppExports.R
 87b342da3f73e80ffdb6c2c5e5391565 *R/aaCheck.R
 98cbec1a01b93122f79ab3713d1c889f *R/aaDescriptors.R
 06c59302fe10fcd646ed8db0f88ca40a *R/aacomp.R
@@ -14,11 +14,11 @@ e9beaa9be8bae8034ec3c1bacbdf0513 *R/charge.R
 a4ae9b1009f856c10266af8c778adb2c *R/cppFunctions.R
 6d52d1473ffcc5ef65cd2de39909b541 *R/crosscovariance.R
 f37ad1607eb6d1d3bcd32362719a9560 *R/crucianiProperties.R
-cd36a16dc5a28b527ffe4bf754237007 *R/data-AA.R
+9c567dfee4a13dbf997149dd00d189e2 *R/data-AA.R
 db9d94338323b6266ac0e050d3ed0487 *R/data-pepdata.R
 03206435513130d2125562c0aac43193 *R/fasgaiVectors.R
 da3281e44a0b7b83239e16b711628ce5 *R/hmoment.R
-f110a841a25e91747d26042e5b538dd5 *R/hydrophobicity.R
+915b99a2308f153897b053e2c9341370 *R/hydrophobicity.R
 7c877af57c2d689331a6f22777894ce4 *R/instaindex.R
 7c47bdc9024593e533084a84e69be86f *R/kideraFactors.R
 1ba5b400304498348de8ca1f263d3579 *R/lengthpep.R
@@ -30,11 +30,11 @@ cd7bbfcdb6e484d7114021ecc29a26e4 *R/pI.R
 918bcc26df1ee1e1a0d94688776c266e *R/protFP.R
 22d7b993f83db51f1003d7041cecffad *R/readXVG.R
 44c80452e33211fc951ce2e019a20282 *R/stScales.R
-b1d01f958b898ff801f486c1363883e2 *R/sysdata.rda
+3d9209c3c871131bdd86ce075ea1ecd7 *R/sysdata.rda
 1abbe8ac28b3d639ae969411a4ef9435 *R/tScales.R
 c731365474bf880852cd0c11ba2ed221 *R/vhseScales.R
 541e2a0102183f39921e6809da76ec4b *R/zScales.R
-24b3cedbacaa782764bc4fb0f12e6cf2 *README.md
+1c45d1783a4ecea6d2ef5067779bdd59 *README.md
 9df5fe92d6500d7fc9511fc4d654b563 *data/AAdata.RData
 504a95da16cea05f0d60d7f2c2594a80 *data/datalist
 ebe05569058ca8f73e875df8325e072d *data/pepdata.RData
@@ -46,7 +46,7 @@ cf6f3a2b14953b44a7ed1aff96330e10 *inst/include/Peptides.h
 099bbd512044524791c66106256617c2 *inst/xvg-files/POPG.xvg
 74d9bb8f0bf7968faa243801e8ca9c42 *inst/xvg-files/RDF.xvg
 ae5ed083b17c6c5f9ad089017ffe8e24 *inst/xvg-files/epot.xvg
-741da5baad082fa9e4d59568d40b0c6a *man/AAdata.Rd
+977dfde43b9b8c660d6238d02d29dd1a *man/AAdata.Rd
 a787aca68130924239996d9ef5beb7bb *man/aIndex.Rd
 492ab71d628992717cb7ac289042028f *man/aaComp.Rd
 590d568970f3722a7ce7e0d87607e2ab *man/aaDescriptors.Rd
@@ -59,7 +59,7 @@ da2091d104ff2a6e0040b500edab8205 *man/crossCovariance.Rd
 c40d6414d36fd687334458e03aec5cfd *man/crucianiProperties.Rd
 0276d8da019517f66f9a1b0d5ebad3f3 *man/fasgaiVectors.Rd
 42d84610200fb4c73bf7c7fcbd4a9160 *man/hmoment.Rd
-70f5d37a503bea1eee8c2b96f48c86b0 *man/hydrophobicity.Rd
+278199d6d52d989e12dcf5dfefece0a7 *man/hydrophobicity.Rd
 167e5686ddb356b830b8726014834d2e *man/instaIndex.Rd
 772aeb1217c8ad75fe1f80bb00c4cb5c *man/kideraFactors.Rd
 ce7b488cc8531f538729303111760897 *man/lengthpep.Rd
@@ -79,6 +79,7 @@ df469a1e0ab896bf5d23c9c538d79e51 *man/vhseScales.Rd
 b1a1c81735b27c5bf5be353e5cbf9797 *src/charge_pI.cpp
 c0d7113e0bb9bb2c76e6a6e75b51ebf6 *src/init.c
 0843fa89d95bdf3501d365c821e33a23 *tests/testthat.R
+13e337348f8f1b13d85672886b0fef82 *tests/testthat/test.aacheck.R
 a11809476d1f7d76f97adf34a11f4a53 *tests/testthat/test.aacomp.R
 e8812e19beebc3cdb4a21427828f89ed *tests/testthat/test.aindex.R
 6ea4e153bd3952f493a221c290b14ad8 *tests/testthat/test.boman.R
