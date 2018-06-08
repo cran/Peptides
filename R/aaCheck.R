@@ -1,7 +1,11 @@
 aaCheck <- function(seq){
-  seq <- toupper(seq)
-  seq <- gsub(pattern = "[[:space:]]+",replacement = "",x = seq)
-  seq <- strsplit(x = seq,split = "")
+  if(!any(lengths(seq) > 1)){
+    seq <- toupper(seq)
+    seq <- gsub(pattern = "[[:space:]]+",replacement = "",x = seq)
+    seq <- strsplit(x = seq,split = "")
+  } else {
+    seq <- lapply(seq,toupper)
+  }
   check <- unlist(lapply(seq,function(sequence){
     !all(seq[[1]]%in%c("A" ,"C" ,"D" ,"E" ,"F" ,"G" ,"H" ,"I" ,"K" ,"L" ,"M" ,"N" ,"P" ,"Q" ,"R" ,"S" ,"T" ,"V" ,"W" ,"Y", "-"))
   }))
