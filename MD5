@@ -1,6 +1,6 @@
-eb1f796c4022b118888b695d30686aa1 *DESCRIPTION
+f021a8be88bf15388e948b869d29a819 *DESCRIPTION
 b5f648bd826c99a07f473aee555873b6 *NAMESPACE
-2930685be7ec3b778c63dd58d6a3d353 *NEWS.md
+4b3518ee06c483d2173c3980febf3ddc *NEWS.md
 c2a8b06bc55b8a4d1f1552bbf4335ca0 *R/RcppExports.R
 160f843be51354adced75fdd2198cee8 *R/aaCheck.R
 31654138d785172e616afa8ad8f1a1f8 *R/aaDescriptors.R
@@ -23,11 +23,11 @@ a9ea7bd85e6c91c5fe18a78a436b8a31 *R/hydrophobicity.R
 dc4d7f9e53e7371a2394004a5ee0eb0d *R/instaindex.R
 9b441a94922134e885438e90539e48a3 *R/kideraFactors.R
 15e77bb29b79d0b5122212c7906860ec *R/lengthpep.R
-79ab44cc4f67d26cf3f8776573cb2b13 *R/massShift.R
+50f912bb663d8b8ad66029d935ed9e9a *R/massShift.R
 6ff4f937f1ef1c88fe190451ca5069fd *R/membpos.R
 bb0915a9d88c12a2caee10bf44757feb *R/mswhimScores.R
-67d1031498bff65246afbb64c840b86e *R/mw.R
-db5fc69c1fdd29adb6b660ed4b783cd7 *R/mz.R
+a18c45503778740a819c0ac7cd4354e7 *R/mw.R
+4ee7ee0afa54a06b8a5d35488119b008 *R/mz.R
 1f55f5b9190b7d6adfbb1a4c7a4f61f5 *R/pI.R
 b40bc7cd9ceb6037f6abf64cf45b45bc *R/plotXVG.R
 4d01e89492405635bcc74e3c2ebfa090 *R/protFP.R
@@ -38,7 +38,7 @@ d0126f8c85cddd22e131a052f938d86d *R/sysdata.rda
 f5a2ae8f052352d32308ea65728c1010 *R/tScales.R
 5ecaf7d9dda43d4efab7b530a824f407 *R/vhseScales.R
 596ccaf42acdd44c5bd3f39be08c25f8 *R/zScales.R
-3a775b38978294d50fe39ca4da84a6d2 *README.md
+29daebd50d333c7e6dab1d4d411bef7e *README.md
 e224d4451273f0dd45d631167937f600 *data/AAdata.RData
 b625a6bd3a155442b1aadd667ade346f *data/datalist
 03e602c8165d73042008a13cd69380f5 *data/pepdata.RData
@@ -69,10 +69,10 @@ a1d7e51896e0d10cd89fdea99c555b78 *man/hydrophobicity.Rd
 6c9284bed356bb05bc9da721698caee3 *man/instaIndex.Rd
 ebf47482949ca98e69f6a0b5839f9e44 *man/kideraFactors.Rd
 1d07c97ac6b9259371b03f53541b50d4 *man/lengthpep.Rd
-b982e111c8eedc3d1f0cfe1508b4e442 *man/massShift.Rd
+2345c612ae9412fd30fc8a3ffa86e227 *man/massShift.Rd
 304bd65582f1070b90701027b0f20424 *man/membpos.Rd
 8c3fdca39fcb5f0a71b8ebbdb5faa7ea *man/mswhimScores.Rd
-6cb2a9abac2060b93688c3d9e52af5c2 *man/mw.Rd
+2e75d65ce7fbedadb935184197b43781 *man/mw.Rd
 f208bc9fb8ec446703c834993c337573 *man/mz.Rd
 58f837f5eb4965ec9df51a119228e824 *man/pI.Rd
 ab1845619203e88b7e884cb50d80d369 *man/pepdata.Rd
