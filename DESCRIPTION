@@ -1,5 +1,5 @@
 Package: Peptides
-Version: 2.4.4
+Version: 2.4.5
 Title: Calculate Indices and Theoretical Physicochemical Properties of
         Protein Sequences
 Authors@R: c(person("Daniel","Osorio", email="daniecos@uio.no",role=c("aut","cre"), comment = c(ORCID = "0000-0003-4424-8422")),
@@ -16,10 +16,10 @@ Description: Includes functions to calculate several physicochemical properties 
 License: GPL-2
 LinkingTo: Rcpp
 Imports: Rcpp
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2021-05-14 13:45:10 UTC; danie
+Packaged: 2023-05-10 16:07:30 UTC; danie
 Author: Daniel Osorio [aut, cre] (<https://orcid.org/0000-0003-4424-8422>),
   Paola Rondon-Villarreal [aut, ths]
     (<https://orcid.org/0000-0001-8209-3885>),
@@ -30,4 +30,4 @@ Author: Daniel Osorio [aut, cre] (<https://orcid.org/0000-0003-4424-8422>),
   Florian C. Sigloch [ctb] (<https://orcid.org/0000-0001-8130-6885>)
 Maintainer: Daniel Osorio <daniecos@uio.no>
 Repository: CRAN
-Date/Publication: 2021-05-14 15:42:11 UTC
+Date/Publication: 2023-05-10 17:00:02 UTC

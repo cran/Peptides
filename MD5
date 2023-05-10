@@ -1,6 +1,5 @@
-f021a8be88bf15388e948b869d29a819 *DESCRIPTION
+9eb31c113d3d5072009fac99ca86359b *DESCRIPTION
 b5f648bd826c99a07f473aee555873b6 *NAMESPACE
-4b3518ee06c483d2173c3980febf3ddc *NEWS.md
 c2a8b06bc55b8a4d1f1552bbf4335ca0 *R/RcppExports.R
 160f843be51354adced75fdd2198cee8 *R/aaCheck.R
 31654138d785172e616afa8ad8f1a1f8 *R/aaDescriptors.R
@@ -42,7 +41,7 @@ f5a2ae8f052352d32308ea65728c1010 *R/tScales.R
 e224d4451273f0dd45d631167937f600 *data/AAdata.RData
 b625a6bd3a155442b1aadd667ade346f *data/datalist
 03e602c8165d73042008a13cd69380f5 *data/pepdata.RData
-5e984dc80abb6b76a1636d52efb50230 *inst/CITATION
+076a83c0a315d235dd6fe48aa89014d6 *inst/CITATION
 cf6f3a2b14953b44a7ed1aff96330e10 *inst/include/Peptides.h
 7a9dc36f2d598ed82c2f2c2a3348c284 *inst/include/Peptides_RcppExports.h
 6a0d1cfce16af90b8c9d4c852461e34e *inst/xvg-files/POPC.xvg
@@ -72,7 +71,7 @@ ebf47482949ca98e69f6a0b5839f9e44 *man/kideraFactors.Rd
 2345c612ae9412fd30fc8a3ffa86e227 *man/massShift.Rd
 304bd65582f1070b90701027b0f20424 *man/membpos.Rd
 8c3fdca39fcb5f0a71b8ebbdb5faa7ea *man/mswhimScores.Rd
-2e75d65ce7fbedadb935184197b43781 *man/mw.Rd
+33dd428d17f131f9ae327a1415e50051 *man/mw.Rd
 f208bc9fb8ec446703c834993c337573 *man/mz.Rd
 58f837f5eb4965ec9df51a119228e824 *man/pI.Rd
 ab1845619203e88b7e884cb50d80d369 *man/pepdata.Rd
@@ -83,9 +82,9 @@ fc530bc7bdf351570218a7229f9d76ef *man/plotXVG.Rd
 60054375739a771b75d4ef86e47870c8 *man/tScales.Rd
 ddd6d4eb08fae256f9f029a4ca851439 *man/vhseScales.Rd
 0f5d05bcfbec7cae6a559bf25b3957b3 *man/zScales.Rd
-fa12e657fe01ba5f04a0540009e9b23e *src/RcppExports.cpp
+cf426dec65bfec48cfd7a1d57ecda674 *src/RcppExports.cpp
 a9fe5b0ce276da8ae4f2bfc7a23105e4 *src/charge_pI.cpp
-ef4eab23ce9609d548f02667027f2036 *src/init.c
+67f9120f1ec36db7614f9536d2ba3789 *src/init.c
 d198361e4f2d70585974a87c1cc82809 *tests/testthat.R
 296e8b3d1c1666a9d73c005a1830952f *tests/testthat/test-SMILES.R
 73fe5a1d2310cac18d3f1904c9231a59 *tests/testthat/test.aaList.R
